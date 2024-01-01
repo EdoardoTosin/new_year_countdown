@@ -6,11 +6,11 @@
 </h1>
 <!--
 <p align="center">
-	<a href="https://github.com/EdoardoTosin/chuck_jokes/releases/latest">
-	<img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EdoardoTosin/chuck_jokes?label=Latest%20Release&style=for-the-badge"></a>
-	<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/EdoardoTosin/chuck_jokes/total?style=for-the-badge">
-	<a href="https://github.com/EdoardoTosin/chuck_jokes/blob/main/LICENSE">
-	<img alt="GitHub" src="https://img.shields.io/github/license/EdoardoTosin/chuck_jokes?style=for-the-badge"></a>
+	<a href="https://github.com/EdoardoTosin/new_year_countdown/releases/latest">
+	<img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EdoardoTosin/new_year_countdown?label=Latest%20Release&style=for-the-badge"></a>
+	<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/EdoardoTosin/new_year_countdown/total?style=for-the-badge">
+	<a href="https://github.com/EdoardoTosin/new_year_countdown/blob/main/LICENSE">
+	<img alt="GitHub" src="https://img.shields.io/github/license/EdoardoTosin/new_year_countdown?style=for-the-badge"></a>
 </p>
 
 <p align="center">
