@@ -1,5 +1,22 @@
-# New Year Countdown App
+<h1 align="center">
+ <sub>
+   <img src="assets/icon/logo.png" height="38" width="38" alt="Logo">
+ </sub>
+ New Year Countdown
+</h1>
+<!--
+<p align="center">
+	<a href="https://github.com/EdoardoTosin/chuck_jokes/releases/latest">
+	<img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EdoardoTosin/chuck_jokes?label=Latest%20Release&style=for-the-badge"></a>
+	<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/EdoardoTosin/chuck_jokes/total?style=for-the-badge">
+	<a href="https://github.com/EdoardoTosin/chuck_jokes/blob/main/LICENSE">
+	<img alt="GitHub" src="https://img.shields.io/github/license/EdoardoTosin/chuck_jokes?style=for-the-badge"></a>
+</p>
 
+<p align="center">
+ <img src="assets/screenshot/preview.png" alt="Preview">
+</p>
+-->
 Welcome to the New Year Countdown App! This is a simple, yet captivating application designed to provide a unique user experience. It's a perfect blend of functionality and aesthetic appeal, making it a delight to use.
 
 ## Features
