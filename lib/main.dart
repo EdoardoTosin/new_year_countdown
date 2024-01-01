@@ -3,12 +3,10 @@ import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:wakelock/wakelock.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:confetti/confetti.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  Wakelock.enable();
   // Lock screen orientation to portrait mode only on mobile devices
   if (Platform.isAndroid || Platform.isIOS) {
     SystemChrome.setPreferredOrientations([
@@ -26,6 +24,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsFlutterBinding.ensureInitialized();
+    WakelockPlus.enable();
     bool isDarkMode =
         MediaQuery.of(context).platformBrightness == Brightness.dark;
 
