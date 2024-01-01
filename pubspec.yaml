@@ -1,5 +1,5 @@
 name: new_year_countdown
-description: "New Year Countdown."
+description: "Welcome to the New Year Countdown App! This is a simple, yet captivating application designed to provide a unique user experience. It's a perfect blend of functionality and aesthetic appeal, making it a delight to use."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
