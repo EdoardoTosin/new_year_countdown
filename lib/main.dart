@@ -66,7 +66,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
         });
       } else {
         setState(() {
-          _start--;
+          _start++;
         });
       }
     });
