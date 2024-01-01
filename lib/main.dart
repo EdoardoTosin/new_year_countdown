@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isDarkMode =
         MediaQuery.of(context).platformBrightness == Brightness.dark;
+
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness:
+            isDarkMode ? Brightness.light : Brightness.dark,
+      ),
+    );
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
