@@ -1,12 +1,21 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wakelock/wakelock.dart';
+import 'package:confetti/confetti.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Wakelock.enable();
+  // Lock screen orientation to portrait mode only on mobile devices
+  if (Platform.isAndroid || Platform.isIOS) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
   runApp(MyApp());
 }
 
@@ -59,6 +68,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
     "See you soon"
   ];
   String _currentPhrase = "";
+  late ConfettiController _controller;
 
   void startTimer() {
     const oneSec = Duration(seconds: 1);
@@ -82,20 +92,20 @@ class _CountdownTimerState extends State<CountdownTimer> {
     var rng = Random();
     var index = rng.nextInt(phrases.length);
     _currentPhrase = phrases[index];
+    _controller = ConfettiController(duration: const Duration(seconds: 10));
     startTimer();
   }
 
   @override
   void dispose() {
     _timer.cancel();
+    _controller.dispose();
     super.dispose();
   }
 
-  // Modified twoDigits function
   String twoDigits(int n, [int length = 2]) =>
       n.toString().padLeft(length, "0");
 
-  // Modified build method
   @override
   Widget build(BuildContext context) {
     int hours = _start.abs() ~/ 3600;
@@ -112,17 +122,42 @@ class _CountdownTimerState extends State<CountdownTimer> {
         style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       );
     } else if (DateTime.now().day == 1 && DateTime.now().month == 1) {
-      return LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          double maxWidth = constraints.maxWidth * 0.75;
-          double maxHeight = constraints.maxHeight * 0.75;
-          return Image.asset(
-            'assets/icon/icon.png',
-            width: maxWidth,
-            height: maxHeight,
-            fit: BoxFit.contain, // or BoxFit.cover depending on your needs
-          );
-        },
+      _controller.play(); // Start the confetti effect
+      return Stack(
+        children: [
+          Positioned(
+            top: -100,
+            left: MediaQuery.of(context).size.width / 2,
+            child: ConfettiWidget(
+              confettiController: _controller,
+              //blastDirection: pi / 2,
+              blastDirectionality: BlastDirectionality.explosive,
+              emissionFrequency: 0.05,
+              numberOfParticles: 10,
+              colors: const [
+                Colors.red,
+                Color(0xFFFFD700), // Gold color
+                Colors.green
+              ], // New Year's Day theme colors
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+                double maxWidth = constraints.maxWidth * 0.75;
+                double maxHeight = constraints.maxHeight * 0.75;
+                return Image.asset(
+                  'assets/icon/icon.png',
+                  width: maxWidth,
+                  height: maxHeight,
+                  fit:
+                      BoxFit.contain, // or BoxFit.cover depending on your needs
+                );
+              },
+            ),
+          ),
+        ],
       );
     } else {
       return Text(
