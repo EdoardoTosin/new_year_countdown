@@ -12,11 +12,11 @@
 	<a href="https://github.com/EdoardoTosin/new_year_countdown/blob/main/LICENSE">
 	<img alt="GitHub" src="https://img.shields.io/github/license/EdoardoTosin/new_year_countdown?style=for-the-badge"></a>
 </p>
-
-<p align="center">
- <img src="assets/screenshot/preview.png" alt="Preview">
-</p>
 -->
+<p align="center">
+ <img src="assets/screenshot/social-preview.png" alt="Preview">
+</p>
+
 Welcome to the New Year Countdown App! This is a simple, yet captivating application designed to provide a unique user experience. It's a perfect blend of functionality and aesthetic appeal, making it a delight to use.
 
 ## Features
