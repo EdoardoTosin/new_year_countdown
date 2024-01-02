@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'New Year Countdown',
       theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
       home: Scaffold(
         body: Center(
