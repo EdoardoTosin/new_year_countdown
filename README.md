@@ -30,7 +30,7 @@ The Countdown Phrase App is available for Android devices. You can download it f
 
 ## Usage
 
-Using the Countdown Phrase App is straightforward. Simply open the app. The app will display a phrase on any day other than December 31st and January 1st. On December 31st, the app will display a special countdown timer leading up to New Year's Day. And on January 1st, the app will display a special surprise.
+Using the Countdown Phrase App is straightforward. Simply open the app. On December 31st, the app will display a special countdown timer leading up to New Year's Day. And on January 1st, the app will display a special surprise.
 
 ## Contributing
 
