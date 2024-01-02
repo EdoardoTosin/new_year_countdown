@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
- <img src="assets/screenshot/social_preview.jpg.png" alt="Preview">
+ <img src="assets/screenshot/social_preview.jpg" alt="Preview">
 </p>
 
 Welcome to the New Year Countdown App! This is a simple, yet captivating application designed to provide a unique user experience. It's a perfect blend of functionality and aesthetic appeal, making it a delight to use.
