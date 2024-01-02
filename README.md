@@ -4,7 +4,7 @@
  </sub>
  New Year Countdown
 </h1>
-<!--
+
 <p align="center">
 	<a href="https://github.com/EdoardoTosin/new_year_countdown/releases/latest">
 	<img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/EdoardoTosin/new_year_countdown?label=Latest%20Release&style=for-the-badge"></a>
@@ -12,7 +12,7 @@
 	<a href="https://github.com/EdoardoTosin/new_year_countdown/blob/main/LICENSE">
 	<img alt="GitHub" src="https://img.shields.io/github/license/EdoardoTosin/new_year_countdown?style=for-the-badge"></a>
 </p>
--->
+
 <p align="center">
  <img src="assets/screenshot/social-preview.png" alt="Preview">
 </p>
