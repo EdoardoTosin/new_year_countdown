@@ -123,9 +123,19 @@ class _CountdownTimerState extends State<CountdownTimer> {
     String twoDigitSeconds = twoDigits(seconds);
 
     if (DateTime.now().day == 31 && DateTime.now().month == 12) {
-      return Text(
-        "$twoDigitHours:$twoDigitMinutes:$twoDigitSeconds",
-        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      double screenWidth = MediaQuery.of(context).size.width;
+      double containerWidth = screenWidth * 0.75;
+      return SizedBox(
+        width: containerWidth,
+        child: FittedBox(
+          fit: BoxFit.fitWidth,
+          child: Text(
+            "$twoDigitHours:$twoDigitMinutes:$twoDigitSeconds",
+            style: const TextStyle(fontWeight: FontWeight.bold),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
       );
     } else if (DateTime.now().day == 1 && DateTime.now().month == 1) {
       _controller.play(); // Start the confetti effect
@@ -166,9 +176,19 @@ class _CountdownTimerState extends State<CountdownTimer> {
         ],
       );
     } else {
-      return Text(
-        _currentPhrase,
-        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      double screenWidth = MediaQuery.of(context).size.width;
+      double containerWidth = screenWidth * 0.75;
+      return SizedBox(
+        width: containerWidth,
+        child: FittedBox(
+          fit: BoxFit.fitWidth,
+          child: Text(
+            _currentPhrase,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
       );
     }
   }
