@@ -154,7 +154,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
                 Colors.red,
                 Color(0xFFFFD700), // Gold color
                 Colors.green
-              ], // New Year's Day theme colors
+              ],
             ),
           ),
           Align(
@@ -168,7 +168,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
                   width: maxWidth,
                   height: maxHeight,
                   fit:
-                      BoxFit.contain, // or BoxFit.cover depending on your needs
+                      BoxFit.contain,
                 );
               },
             ),
